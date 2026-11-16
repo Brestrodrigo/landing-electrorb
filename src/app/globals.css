@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   ELECTRO RB — Global Styles
+   ============================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-brand-gray-900;
+  }
+
+  /* Focus visible styles for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-yellow;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-brand-yellow text-brand-black;
+  }
+}
+
+@layer components {
+  /* Primary CTA Button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 
+           bg-brand-yellow text-brand-black font-semibold 
+           px-6 py-3 rounded-lg
+           transition-all duration-200 ease-out
+           hover:bg-brand-yellow-hover hover:shadow-lg hover:shadow-brand-yellow/20
+           active:scale-[0.98]
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-yellow;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 
+           bg-transparent text-brand-gray-900 font-semibold 
+           px-6 py-3 rounded-lg border-2 border-brand-gray-300
+           transition-all duration-200 ease-out
+           hover:border-brand-gray-900 hover:bg-brand-gray-50
+           active:scale-[0.98]
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-yellow;
+  }
+
+  /* Ghost/Dark Button */
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 
+           bg-brand-black text-white font-semibold 
+           px-6 py-3 rounded-lg
+           transition-all duration-200 ease-out
+           hover:bg-brand-graphite
+           active:scale-[0.98]
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-yellow;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Scroll animation base state */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+
+  .animate-on-scroll.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Stagger delays for children */
+  .stagger-1 { transition-delay: 100ms; }
+  .stagger-2 { transition-delay: 200ms; }
+  .stagger-3 { transition-delay: 300ms; }
+  .stagger-4 { transition-delay: 400ms; }
+  .stagger-5 { transition-delay: 500ms; }
+  .stagger-6 { transition-delay: 600ms; }
+  .stagger-7 { transition-delay: 700ms; }
+}
+
+@layer utilities {
+  /* Yellow accent underline */
+  .accent-underline {
+    @apply relative;
+  }
+  
+  .accent-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[3px] bg-brand-yellow;
+  }
+}
