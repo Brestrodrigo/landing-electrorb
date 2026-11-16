@@ -44,7 +44,7 @@ export default function About() {
           }`}
         >
           <p className="text-md md:text-lg italic text-gray-500">
-            "Reparar sin saber qué está pasando no es reparar: es cruzar los dedos."
+            &quot;Reparar sin saber qué está pasando no es reparar: es cruzar los dedos.&quot;
           </p>
         </div>
       </div>
