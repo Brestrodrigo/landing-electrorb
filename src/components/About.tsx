@@ -9,11 +9,10 @@ export default function About() {
   return (
     <section id="nosotros" className="py-20 bg-white" aria-labelledby="about-title">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div 
+        <div
           ref={ref}
-          className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-700 transform ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <h2 id="about-title" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             ¿Por qué Electro RB?
@@ -25,11 +24,10 @@ export default function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {aboutValues.map((value: { title: string; description: string }, index: number) => (
-            <div 
+            <div
               key={index}
-              className={`p-6 rounded-lg bg-gray-50 border-l-4 border-[#FFED00] transition-all duration-700 transform ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`p-6 rounded-lg bg-gray-50 border-l-4 border-[#FFED00] transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
@@ -38,10 +36,9 @@ export default function About() {
           ))}
         </div>
 
-        <div 
-          className={`text-center max-w-2xl mx-auto transition-all duration-700 delay-500 transform ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+        <div
+          className={`text-center max-w-2xl mx-auto transition-all duration-700 delay-500 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <p className="text-md md:text-lg italic text-gray-500">
             &quot;Reparar sin saber qué está pasando no es reparar: es cruzar los dedos.&quot;

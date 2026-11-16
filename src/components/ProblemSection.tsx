@@ -7,11 +7,10 @@ export default function ProblemSection() {
 
   return (
     <section id="problema" className="bg-gray-50 py-24 px-4 md:px-8">
-      <div 
+      <div
         ref={ref}
-        className={`max-w-3xl mx-auto text-center transition-all duration-1000 transform ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`max-w-3xl mx-auto text-center transition-all duration-1000 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
           ¿Necesitás resolver un problema eléctrico?
@@ -23,7 +22,7 @@ export default function ProblemSection() {
           En Electro RB evaluamos cada trabajo para encontrar una solución segura, funcional y adecuada a las necesidades reales de la instalación.
         </p>
         <blockquote className="border-l-4 border-[#FFED00] pl-6 py-2 text-xl md:text-2xl italic text-gray-800 mx-auto w-fit">
-          "No se trata solamente de conectar cables. Se trata de hacer el trabajo correctamente."
+          &quot;No se trata solamente de conectar cables. Se trata de hacer el trabajo correctamente.&quot;
         </blockquote>
       </div>
     </section>
